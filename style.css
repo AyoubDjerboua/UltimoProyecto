@@ -5,8 +5,8 @@
 /* 1. RESET & VARIABLES */
 :root {
   /* Couleurs principales */
-  --color-primary: #ff0000;    /* Rouge Pokémon */
-  --color-secondary: #ffd700;  /* Doré Pokémon */
+  --color-primary: #ff0000;    /* Rouge*/
+  --color-secondary: #ffd700;  /* Doré*/
   --color-dark: #000000;
   --color-light: #ffffff;
   
