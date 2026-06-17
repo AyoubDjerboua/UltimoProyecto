@@ -9,19 +9,20 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container"> 
             <nav>
                 <div class="logo">PokéFood</div>
                 <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="about.html">À Propos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (la barre d'introduction) -->
     <section class="hero">
         <div class="container">
             <h1>Bienvenue à PokéFood</h1>
@@ -30,45 +31,64 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
+    <!-- Values Section -->
+    <section class="values-section">
         <div class="container">
-            <h2 class="section-title">Notre Histoire</h2>
-            
-            <!-- Story Block 1 -->
-            <div class="about-block">
-                <div class="about-text">
-                    <h3>Une Tradition Ancestrale</h3>
-                    <p>PokéFood est née d'une passion transmise de génération en génération. Depuis plus de 30 ans, notre famille cultive une relation privilégiée avec les Pokémon, les élevant avec respect et tendresse dans nos terres traditionnelles. Chaque plat raconte l'histoire d'un animal élevé dans les plus meilleures conditions, nourri de manière biologique et durable.</p>
+            <h2 class="section-title">Nos Valeurs</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>100% Biologique</h3>
+                    <p>Nos Pokémon sont élevés de manière entièrement biologique, sans additifs ni conservateurs.</p>
                 </div>
-                <div class="about-image about-image-1"></div>
+                <div class="value-card">
+                    <div class="value-icon">👨‍👩‍👧</div>
+                    <h3>Tradition Familiale</h3>
+                    <p>Une passion transmise de génération en génération depuis plus de 30 ans.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <h3>Excellence</h3>
+                    <p>Chaque plat est une œuvre d'art culinaire préparée avec amour et expertise.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Story Block 2 -->
-            <div class="about-block about-block-reverse">
-                <div class="about-image about-image-2"></div>
-                <div class="about-text">
-                    <h3>Le Secret de Nos Saveurs</h3>
-                    <p>Notre secret réside dans une alchimie unique : l'amour du détail, le respect de la nature et des recettes transmises par nos ancêtres. Nous n'utilisons jamais d'ingrédients artificiels. Chaque sauce, chaque assaisonnement est préparé artisanalement selon des méthodes qui remontent à plusieurs décennies. Les Pokémon que nous accueillons sont bien plus que des ingrédients - ils sont les gardiens de nos valeurs.</p>
+    <!-- Best Sellers Section -->
+    <section class="best-sellers-section">
+        <div class="container">
+            <h2 class="section-title">Nos Spécialités</h2>
+            <div class="best-sellers-grid">
+                <div class="seller-card">
+                    <div class="seller-image caraburger"></div>
+                    <h3>Caraburger</h3>
+                    <p>Filet pané et sauce spéciale</p>
+                    <div class="seller-rating">⭐⭐⭐⭐⭐ (247 avis)</div>
+                    <p class="seller-price">12,99€</p>
+                    <a href="menu.html" class="btn btn-small">Commander</a>
+                </div>
+
+                <div class="seller-card">
+                    <div class="seller-image articuno"></div>
+                    <h3>Pizza Articuno</h3>
+                    <p>Fromagère avec fruits de mer frais</p>
+                    <div class="seller-rating">⭐⭐⭐⭐⭐ (189 avis)</div>
+                    <p class="seller-price">14,99€</p>
+                    <a href="menu.html" class="btn btn-small">Commander</a>
+                </div>
+
+                <div class="seller-card">
+                    <div class="seller-image zapdos"></div>
+                    <h3>Ramen Zapdos</h3>
+                    <p>Nouilles avec bouillon électrisant</p>
+                    <div class="seller-rating">⭐⭐⭐⭐⭐ (312 avis)</div>
+                    <p class="seller-price">11,99€</p>
+                    <a href="menu.html" class="btn btn-small">Commander</a>
                 </div>
             </div>
-
-            <!-- Story Block 3 -->
-            <div class="about-block">
-                <div class="about-text">
-                    <h3>Un Engagement Envers l'Excellence</h3>
-                    <p>Chaque assiette qui quitte notre cuisine est le résultat d'un engagement inébranlable envers l'excellence. Nos chefs, formés aux techniques culinaires les plus raffinées, transforment les meilleurs ingrédients en œuvres d'art culinaire. Nous croyons que la cuisine traditionnelle, lorsqu'elle est pratiquée avec passion et respect, a le pouvoir de créer des souvenirs indélébiles.</p>
-                </div>
-                <div class="about-image about-image-3"></div>
-            </div>
-
-            <!-- Story Block 4 -->
-            <div class="about-block about-block-reverse">
-                <div class="about-image about-image-4"></div>
-                <div class="about-text">
-                    <h3>Rejoignez Notre Famille</h3>
-                    <p>Aujourd'hui, PokéFood invite chaque client à faire partie de cette grande famille. En franchissant nos portes, vous ne venez pas seulement manger - vous entrez dans un univers où chaque saveur parle de tradition, de respect et de passion. Nous vous accueillons comme nous accueillons nos Pokémon : avec le cœur ouvert et la main généreuse.</p>
-                </div>
+            <div class="center-button">
+                <a href="menu.html" class="btn btn-large">Découvrir tous les plats</a>
             </div>
         </div>
     </section>
@@ -77,7 +97,7 @@
     <footer id="contact">
         <div class="container">
             <p>&copy; 2026 Pokémon Food - Tous droits réservés</p>
-            <p>📍 Adresse: 123 Rue des , Ville Pokémon | 📞 Tél: +33 (0)1 23 45 67 89</p>
+            <p>📍 Adresse: 123 Rue des Pokémons, Ville Pokémon | 📞 Tél: +33 (0)1 23 45 67 89</p>
             <p>📧 Email: contact@pokemonfood.com | Web: www.pokemonfood.com</p>
         </div>
     </footer>

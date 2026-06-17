@@ -1,323 +1,544 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* ============================================
+   POKÉMON FOOD - FEUILLE DE STYLES
+   ============================================ */
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-image: url('assets/images/background.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
+/* 1. RESET & VARIABLES */
+:root {
+  /* Couleurs principales */
+  --color-primary: #ff0000;    /* Rouge Pokémon */
+  --color-secondary: #ffd700;  /* Doré Pokémon */
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  
+  /* Couleurs texte */
+  --text-dark: #333333;
+  --text-medium: #555555;
+  --text-light: #666666;
+  --text-muted: #d2d2d2;
+  
+  /* Espacements */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-xlarge: 3rem;
+  --spacing-section: 4rem;
+  
+  /* Ombres */
+  --shadow-small: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 8px 25px rgba(255, 0, 0, 0.2);
+}
 
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, #FF0000 0%, #FFD700 100%);
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+/* Reset CSS - remet tous les styles par défaut à 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Les marges/padding ne s'ajoutent pas à la largeur */
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-image: url("assets/images/background.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* 2. CONTENEUR GÉNÉRAL */
+.container {
+  max-width: 1200px;  /* Largueur maximale */
+  margin: 0 auto;     /* Centrage horizontal */
+  padding: 0 20px;    /* Marges internes pour petits écrans */
+}
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+/* 3. HEADER & NAVIGATION */
+header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-small);
+  position: sticky;   /* Reste en haut au scroll */
+  top: 0;
+  z-index: 100;       /* Au-dessus de tout le contenu */
+}
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #000000 0%, #00000086 50%);
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
+.nav-links a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-        }
+.nav-links a:hover {
+  opacity: 0.8;
+}
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
+/* 4. HERO SECTION - Section d'accueil principale */
+.hero {
+  background: linear-gradient(135deg, var(--color-dark) 0%, rgba(0, 0, 0, 0.53) 50%);
+  color: var(--color-light);
+  padding: var(--spacing-section) 0;
+  text-align: center;
+}
 
-        .btn {
-            background-color: #ff0000;
-            color: #dcdcdc;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
 
-        /* Menu Section */
-        .menu-section {
-            padding: 4rem 0;
-            background-image: url('assets/images/menu-background.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
+/* 5. BOUTONS - Styles de tous les boutons */
+.btn {
+  background-color: var(--color-primary);
+  color: #dcdcdc;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            background-color: #00000095;
-            color: #ffffff;
-        }
+.btn:hover {
+  transform: translateY(-2px);  /* Décale vers le haut */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+.btn-small {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+}
 
-        .menu-card {
-            background: rgba(0, 0, 0, 0.586);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.btn-large {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+}
 
-        .menu-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.2);
-        }
+/* 6. SECTION VALEURS - Cards avec 3 colonnes */
+.values-section {
+  padding: var(--spacing-section) 0;
+  background-color: rgba(0, 0, 0, 0.2);  /* Plus d'effet d'assombrissement */
+}
 
-        .menu-card-image {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 colonnes égales */
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-xlarge);
+}
 
-        .menu-card-image.caraburger {
-            background-image: url('assets/images/caraburger.png');
-        }
+.value-card {
+  text-align: center;
+  padding: var(--spacing-large);
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffffb1 100%);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-medium);
+}
 
-        .menu-card-image.chapizza {
-            background-image: url('assets/images/chapizza.png');
-        }
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.15);
+}
 
-        .menu-card-image.zapdos {
-            background-image: url('assets/images/zapdos.jpg');
-        }
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-        .menu-card-image.pokeball {
-            background-image: url('assets/images/pokeball.jpg');
-        }
+.value-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
 
-        .menu-card-image.venusaur {
-            background-image: url('assets/images/venusaur.jpg');
-        }
+.value-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
 
-        .menu-card-image.blastoise {
-            background-image: url('assets/images/blastoise.jpg');
-        }
+/* 7. SECTION MEILLEURES VENTES */
+.best-sellers-section {
+  padding: var(--spacing-section) 0;
+  background-color: rgba(0, 0, 0, 0.2);  /* Plus d'effet d'assombrissement */
+}
 
-        .menu-card-content {
-            padding: 1.5rem;
-        }
+.best-sellers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
+}
 
-        .menu-card-title {
-            font-size: 1.3rem;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
+.seller-card {
+  background: var(--color-light);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.5rem;
+}
 
-        .menu-card-description {
-            color: #d2d2d2;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
+.seller-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-large);
+}
 
-        .menu-card-price {
-            font-size: 1.5rem;
-            color: #ffffff;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
+.seller-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
 
-        .menu-card .btn {
-            width: 100%;
-            text-align: center;
-        }
+.seller-card h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
 
-        /* About Section */
-        .about-section {
-            padding: 4rem 0;
-            background-color: #f9f9f9;
-        }
+.seller-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
 
-        .about-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 4rem;
-        }
+.seller-rating {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
 
-        .about-block-reverse {
-            grid-template-columns: 1fr 1fr;
-            direction: rtl;
-        }
+.seller-price {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
 
-        .about-block-reverse > * {
-            direction: ltr;
-        }
+.seller-card .btn {
+  width: 100%;
+  text-align: center;
+}
 
-        .about-text h3 {
-            font-size: 1.8rem;
-            color: #FF0000;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
+.center-button {
+  text-align: center;
+}
 
-        .about-text p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.8;
-            text-align: justify;
-        }
+/* 8. SECTION MENU */
+.menu-section {
+  padding: var(--spacing-section) 0;
+  background-image: url("assets/images/menu-background.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 
-        .about-image {
-            width: 100%;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xlarge);
+  background-color: rgba(0, 0, 0, 0.58);
+  color: var(--color-light);
+  padding: 1rem;
+}
 
-        .about-image-1 {
-            background-image: url('assets/images/tradition.jpg');
-        }
+/* Boutons de filtrage */
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: var(--spacing-xlarge);
+  flex-wrap: wrap;
+}
 
-        .about-image-2 {
-            background-image: url('assets/images/secret.jpg');
-        }
+.filter-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-light);
+  border: 2px solid var(--color-light);
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-        .about-image-3 {
-            background-image: url('assets/images/excellence.jpg');
-        }
+.filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
-        .about-image-4 {
-            background-image: url('assets/images/famille.jpg');
-        }
+/* Bouton activé */
+.filter-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
 
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #FF0000 0%, #FFD700 100%);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-large);
+}
 
-        footer p {
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
+.menu-card {
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-large);
+}
 
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-            }
+.menu-card-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-            .hero h1 {
-                font-size: 2rem;
-            }
+/* Images spécifiques des plats */
+.menu-card-image.caraburger {
+  background-image: url("assets/images/caraburger.png");
+}
 
-            .hero p {
-                font-size: 1rem;
-            }
+.menu-card-image.chapizza {
+  background-image: url("assets/images/chapizza.png");
+}
 
-            .section-title {
-                font-size: 2rem;
-            }
+.menu-card-image.taupikoko {
+  background-image: url("assets/images/taupikoko.png");
+}
 
-            .about-block {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
+.menu-card-image.pokeball {
+  background-image: url("assets/images/pokeball.jpg");
+}
 
-            .about-block-reverse {
-                direction: ltr;
-            }
+.menu-card-image.venusaur {
+  background-image: url("assets/images/venusaur.jpg");
+}
 
-            .about-block-reverse > * {
-                direction: ltr;
-            }
+.menu-card-image.blastoise {
+  background-image: url("assets/images/blastoise.jpg");
+}
 
-            .about-text h2 {
-                font-size: 1.5rem;
-            }
+.menu-card-content {
+  padding: 1.5rem;
+}
 
-            .about-text h3 {
-                font-size: 1.3rem;
-            }
+.menu-card-title {
+  font-size: 1.3rem;
+  color: var(--color-light);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
 
-            .about-text p {
-                font-size: 0.9rem;
-                text-align: left;
-            }
+.menu-card-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
 
-            .about-image {
-                height: 200px;
-            }
-        }
+.menu-card-price {
+  font-size: 1.5rem;
+  color: var(--color-light);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.menu-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* 9. SECTION À PROPOS - Texte et images alternées */
+.about-section {
+  padding: var(--spacing-section) 0;
+  background-color: rgba(0, 0, 0, 0.2);  /* Cohérent avec les autres sections */
+}
+
+.about-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xlarge);
+  align-items: center;
+  margin-bottom: var(--spacing-section);
+}
+
+/* Les blocs reverse affichent l'image à gauche et le texte à droite */
+.about-block-reverse {
+  direction: rtl; /* Inverse l'ordre d'affichage */
+}
+
+.about-block-reverse > * {
+  direction: ltr; /* Remet le texte dans le bon sens */
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  color: var(--color-light);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about-text p {
+  color: var(--color-light);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: var(--shadow-medium);
+}
+
+/* Images spécifiques de l'histoire */
+.about-image-1 {
+  background-image: url("assets/images/tradition.jpg");
+}
+
+.about-image-2 {
+  background-image: url("assets/images/secret.jpg");
+}
+
+.about-image-3 {
+  background-image: url("assets/images/excellence.jpg");
+}
+
+.about-image-4 {
+  background-image: url("assets/images/famille.jpg");
+}
+
+/* 10. FOOTER */
+footer {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-light);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: var(--spacing-xlarge);
+}
+
+footer p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 11. RESPONSIVE - Adaptation pour les petits écrans (max 768px) */
+@media (max-width: 768px) {
+  /* Tous les grids passent à 1 colonne */
+  .values-grid,
+  .best-sellers-grid,
+  .menu-grid,
+  .about-block {
+    grid-template-columns: 1fr;
+  }
+
+  /* Réajustement des espacements */
+  .values-grid,
+  .best-sellers-grid,
+  .menu-grid {
+    gap: var(--spacing-large);
+  }
+
+  /* Navigation réduite */
+  .nav-links {
+    gap: 1rem;
+  }
+
+  /* Textes plus petits */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Filtres plus compacts sur mobile */
+  .menu-filters {
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-large);
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Spacing réduit sur mobile */
+  .about-block {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Les blocs reverse deviennent normaux sur mobile */
+  .about-block-reverse {
+    direction: ltr;
+  }
+
+  .about-block-reverse > * {
+    direction: ltr;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  /* Images réduites sur mobile */
+  .about-image {
+    height: 200px;
+  }
+}

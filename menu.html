@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Pokémon Food</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -14,8 +15,9 @@
                 <div class="logo">PokéFood</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
                     <li><a href="about.html">À Propos</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,8 +27,18 @@
     <section class="menu-section">
         <div class="container">
             <h1 class="section-title">Notre Menu</h1>
+            
+            <!-- Boutons de filtrage -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn" data-filter="entrees">Entrées</button>
+                <button class="filter-btn" data-filter="plats">Plats</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="boissons">Boissons</button>
+            </div>
+
             <div class="menu-grid">
-                <div class="menu-card">
+                <div class="menu-card" data-category="plats">
                     <div class="menu-card-image caraburger"></div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title">Caraburger</h3>
@@ -36,7 +48,7 @@
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card" data-category="plats">
                     <div class="menu-card-image chapizza"></div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title">Pizza aux Chapignons</h3>
@@ -46,17 +58,17 @@
                     </div>
                 </div>
 
-                <div class="menu-card">
-                    <div class="menu-card-image zapdos"></div>
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image taupikoko"></div>
                     <div class="menu-card-content">
-                        <h3 class="menu-card-title">Ramen Zapdos</h3>
-                        <p class="menu-card-description">Nouilles savoureuses avec bouillon électrisant.</p>
-                        <p class="menu-card-price">11,99€</p>
+                        <h3 class="menu-card-title">Glace Taupikoko</h3>
+                        <p class="menu-card-description">Glace au chocolat intense et aux biscuits sablés.</p>
+                        <p class="menu-card-price">6,99€</p>
                         <button class="btn">Ajouter au panier</button>
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card" data-category="desserts">
                     <div class="menu-card-image pokeball"></div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title">Pokéball Dessert</h3>
@@ -66,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card" data-category="entrees">
                     <div class="menu-card-image venusaur"></div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title">Salade Venusaur</h3>
@@ -76,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="menu-card">
+                <div class="menu-card" data-category="boissons">
                     <div class="menu-card-image blastoise"></div>
                     <div class="menu-card-content">
                         <h3 class="menu-card-title">Smoothie Blastoise</h3>
@@ -97,5 +109,5 @@
             <p>📧 Email: contact@pokemonfood.com | Web: www.pokemonfood.com</p>
         </div>
     </footer>
-</body>
+</html>
 </html>
