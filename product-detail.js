@@ -1,4 +1,5 @@
-// Base de données des produits
+// cart-core.js doit être chargé AVANT dans le HTML
+// // Base de données des produits
 const products = {
     'caraburger': {
         id: 'caraburger',
@@ -146,13 +147,13 @@ const products = {
     }
 };
 
-// Fonction pour charger le produit
+// Charger le produit
 function loadProduct() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    
+
     const product = products[productId];
-    
+
     if (!product) {
         document.getElementById('productDetail').innerHTML = `
             <div class="error-message">
@@ -163,47 +164,49 @@ function loadProduct() {
         `;
         return;
     }
-    
-    const allergensBadges = product.allergens.map(allergen => `<span class="allergen-badge">${allergen}</span>`).join('');
-    
-    const html = `
+
+    const allergensBadges = product.allergens
+        .map(a => `<span class="allergen-badge">${a}</span>`)
+        .join('');
+
+    document.getElementById('productDetail').innerHTML = `
         <div class="product-detail-wrapper">
             <div class="product-image-container">
                 <div class="product-detail-image ${product.image}"></div>
             </div>
-            
+
             <div class="product-info">
                 <span class="product-category">${product.category}</span>
                 <h1 class="product-title">${product.name}</h1>
-                
+
                 <div class="product-rating">
                     <span class="stars">⭐⭐⭐⭐⭐</span>
-                    <span class="rating-text">${product.rating}/5.0 (${product.reviews} avis)</span>
+                    <span class="rating-text">${product.rating}/5 (${product.reviews} avis)</span>
                 </div>
-                
+
                 <div class="product-price-section">
                     <p class="product-price">${product.price.toFixed(2)}€</p>
                 </div>
-                
+
                 <div class="product-description">
                     <h3>Description</h3>
                     <p>${product.description}</p>
                 </div>
-                
+
                 <div class="product-allergens">
                     <h3>Allergènes</h3>
                     <div class="allergens-container">
                         ${allergensBadges}
                     </div>
                 </div>
-                
+
                 <div class="product-ingredients">
                     <h3>Ingrédients</h3>
                     <p>${product.ingredients}</p>
                 </div>
-                
+
                 <div class="product-nutrition">
-                    <h3>Informations Nutritionnelles (pour 100g)</h3>
+                    <h3>Nutrition</h3>
                     <div class="nutrition-grid">
                         <div class="nutrition-item">
                             <span class="nutrition-label">Calories</span>
@@ -223,17 +226,14 @@ function loadProduct() {
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="product-actions">
                     <input type="number" id="quantity" min="1" max="10" value="1" class="quantity-input">
-                    <button class="btn btn-large">Ajouter au panier</button>
+                    <button class="btn btn-large">Passer commande</button>
                 </div>
             </div>
         </div>
     `;
-    
-    document.getElementById('productDetail').innerHTML = html;
 }
 
-// Charger le produit au chargement de la page
 document.addEventListener('DOMContentLoaded', loadProduct);
