@@ -218,6 +218,18 @@ nav {
   margin-bottom: 1rem;
 }
 
+.seller-image.caraburger {
+  background-image: url("assets/images/caraburger.png");
+}
+
+.seller-image.chapizza {
+  background-image: url("assets/images/chapizza.png");
+}
+
+.seller-image.taupikoko {
+  background-image: url("assets/images/taupikoko.png");
+}
+
 .seller-card h3 {
   font-size: 1.3rem;
   color: var(--color-primary);
@@ -434,19 +446,21 @@ nav {
 
 /* Images spécifiques de l'histoire */
 .about-image-1 {
-  background-image: url("assets/images/tradition.jpg");
+  background-image: url("assets/images/tradition.png");
 }
 
 .about-image-2 {
-  background-image: url("assets/images/secret.jpg");
+  background-image: url("assets/images/secret.png");
 }
 
 .about-image-3 {
-  background-image: url("assets/images/excellence.jpg");
+  background-image: url("assets/images/excellenge.png");
+  background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
 }
 
 .about-image-4 {
-  background-image: url("assets/images/famille.jpg");
+  background-image: url("assets/images/family.png");
+  background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
 }
 
 /* 10. FOOTER */
