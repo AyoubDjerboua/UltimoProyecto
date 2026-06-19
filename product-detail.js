@@ -19,17 +19,17 @@ const products = {
             fat: '28g'
         }
     },
-    'pizza-articuno': {
-        id: 'pizza-articuno',
-        name: 'Pizza Articuno',
+    'chapizza': {
+        id: 'pizza-chapizza',
+        name: 'Pizza Chapizza',
         price: 14.99,
-        image: 'articuno',
-        rating: 4.8,
+        image: 'chapizza',
+        rating: 4.7,
         reviews: 189,
         category: 'Plats',
-        description: 'Une pizza fromagère généreuse garnie de fruits de mer frais : crevettes, moules et calmar. La pâte croustillante et le mélange de fromages fondus créent une harmonie parfaite avec les saveurs marines.',
-        ingredients: 'Pâte maison, sauce tomate, mozzarella, emmental, crevettes, moules, calmar, oignons, herbes de Provence',
-        allergens: ['Gluten', 'Crustacés', 'Mollusques', 'Lait'],
+        description: 'Une pizza fromagère généreuse garnie de champignons frais. La pâte croustillante et le mélange de fromages fondus créent une harmonie parfaite avec les saveurs boisées.',
+        ingredients: 'Pâte maison, sauce tomate, mozzarella, emmental, champignons, oignons, herbes de Provence',
+        allergens: ['Gluten', 'Lait', 'Œufs', 'Arachides', 'Fruits à coque', 'Sésame'],
         nutritionInfo: {
             calories: 720,
             protein: '38g',
@@ -37,40 +37,22 @@ const products = {
             fat: '32g'
         }
     },
-    'ramen-zapdos': {
-        id: 'ramen-zapdos',
-        name: 'Ramen Zapdos',
-        price: 11.99,
-        image: 'zapdos',
-        rating: 4.9,
+    'florisalade': {
+        id: 'florisalade',
+        name: 'Salade Florisalade',
+        price: 10.99,
+        image: 'florisalade',
+        rating: 4.6,
         reviews: 312,
-        category: 'Plats',
-        description: 'Des nouilles ondulées parfaitement cuites dans un bouillon électrisant aux saveurs épicées. Garni de poulet tendre, œuf mollet, germes de soja, champignons shiitake et poireau. Une explosion de saveurs asiatiques !',
-        ingredients: 'Nouilles ramen, bouillon de poulet épicé, poulet fermier, œuf, germes de soja, champignons shiitake, poireau, sésame',
-        allergens: ['Gluten', 'Œufs', 'Arachides'],
+        category: 'Entrées',
+        description: 'Une salade fraîche et équilibrée riche en saveurs naturelles. Laitue biologique, épinards frais, fruits de saison, noix croustillantes et vinaigrette maison à base d\'agrumes. Santé et gourmandise réunies !',
+        ingredients: 'Laitue biologique, épinards frais, tomate, carotte, pomme, raisins, noix, graines de courge, vinaigrette agrumes',
+        allergens: ['Fruits à coque', 'Moutarde'],
         nutritionInfo: {
             calories: 590,
             protein: '32g',
             carbs: '68g',
             fat: '18g'
-        }
-    },
-    'pizza-champignons': {
-        id: 'pizza-champignons',
-        name: 'Pizza aux Champignons',
-        price: 14.99,
-        image: 'chapizza',
-        rating: 4.7,
-        reviews: 156,
-        category: 'Plats',
-        description: 'Une pizza végétarienne aux saveurs boisées authentiques. Garnie d\'un mélange de champignons frais : champignons de Paris, shiitake et cèpes. Agrémentée de fromage de chèvre et d\'échalotes caramélisées.',
-        ingredients: 'Pâte maison, sauce tomate, mozzarella, fromage de chèvre, champignons de Paris, shiitake, cèpes, échalotes, thym frais',
-        allergens: ['Gluten', 'Lait'],
-        nutritionInfo: {
-            calories: 680,
-            protein: '28g',
-            carbs: '62g',
-            fat: '30g'
         }
     },
     'glace-taupikoko': {
@@ -91,15 +73,15 @@ const products = {
             fat: '18g'
         }
     },
-    'pokeball-dessert': {
-        id: 'pokeball-dessert',
-        name: 'Pokéball Dessert',
-        price: 6.99,
-        image: 'pokeball',
+    'sorbet-sorbébé': {
+        id: 'sorbet-sorbébé',
+        name: 'Sorbet Sorbébé',
+        price: 5.99,
+        image: 'sorbébé',
         rating: 4.6,
         reviews: 142,
         category: 'Desserts',
-        description: 'Un dessert ludique en forme de Pokéball ! Composé d\'une génoise moelleuse, de crème pâtissière vanillée et d\'une décoration en pâte à sucre rouge et blanche. Parfait pour les fans de Pokémon !',
+        description: 'Un sorbet fruité et rafraîchissant, parfait pour les journées chaudes. Mélange d\'agrumes pour une expérience légère et savoureuse.',
         ingredients: 'Farine, œufs, sucre, beurre, lait, vanille, pâte à sucre, chocolat blanc',
         allergens: ['Gluten', 'Œufs', 'Lait', 'Lait/Gluten'],
         nutritionInfo: {

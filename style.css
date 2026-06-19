@@ -356,12 +356,16 @@ nav {
   background-image: url("assets/images/taupikoko.png");
 }
 
+.menu-card-image.sorbébé {
+  background-image: url("assets/images/sorbébé.png");
+}
+
 .menu-card-image.pokeball {
   background-image: url("assets/images/pokeball.jpg");
 }
 
-.menu-card-image.venusaur {
-  background-image: url("assets/images/venusaur.jpg");
+.menu-card-image.florisalade {
+  background-image: url("assets/images/florisalade.png");
 }
 
 .menu-card-image.blastoise {
@@ -596,6 +600,10 @@ footer p {
   background-repeat: no-repeat;
   border-radius: 15px;
   box-shadow: var(--shadow-medium);
+}
+
+.product-detail-image.caraburger {
+    background-image: url("assets/images/caraburger.png");
 }
 
 .product-info {
